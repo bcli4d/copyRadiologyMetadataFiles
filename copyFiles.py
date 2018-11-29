@@ -16,7 +16,7 @@ def copyFiles(args,fromTo):
     froms = fromToDict.keys()
     for from_ in froms:
         print("{} {} {} {}".format('gsutil','cp',from_,fromToDict[from_]))
-        subprocess.call(['gsutil','cp',from,fromTo[from]])
+        subprocess.call(['gsutil','cp',from_,fromToDict[from_]])
 
 def deleteFiles(args, fromTo):
     fromToDict = json.loads(fromTo[0])
